@@ -6,10 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import brave.Tracer;
 
 @RestController
 @RequestMapping("/products")
 public class ProductsController {
+
+    @Autowired()
+    private Tracer tracer;
 
     @Autowired()
     private DiscoveryClient discoveryClient;
