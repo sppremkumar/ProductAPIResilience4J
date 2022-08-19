@@ -6,9 +6,11 @@ import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cache.annotation.EnableCaching;
 
 @SpringBootApplication
 @EnableDiscoveryClient()
+@EnableCaching()
 public class ProductApiResilience4JApplication {
 
     public static void main(String[] args) {
